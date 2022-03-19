@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Form, Button, Row } from 'react-bootstrap'
-import '../App.css';
+import './App.css';
 import axios from 'axios';
 
 class Fib extends Component {

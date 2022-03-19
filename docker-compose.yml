@@ -11,10 +11,10 @@ services:
       - api
       - client
     restart: always
-    build: 
+    build:
       dockerfile: Dockerfile.dev
       context: ./nginx
-    ports: 
+    ports:
       - '3051:80'
   api:
     build:
@@ -26,10 +26,10 @@ services:
     environment:
       - REDIS_HOST=redis
       - REDIS_PORT=6379
-      - PGUSER=tw0tr33s
+      - PGUSER=postgres
       - PGHOST=postgres
-      - PGDATABASE=docker-bird
-      - PGPASSWORD=vorplesword
+      - PGDATABASE=postgres
+      - PGPASSWORD=postgres_password
       - PGPORT=5432
   client:
     stdin_open: true
